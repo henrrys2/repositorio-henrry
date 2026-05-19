@@ -30,7 +30,7 @@ const contactLinks = [
     icon: LinkedinIcon,
     label: "LinkedIn",
     value: "henrry-mendoza",
-    href: "https://linkedin.com/in/henrry-mendoza",
+    href: "https://www.linkedin.com/in/henrry-mendoza-85a71619b/",
   },
   {
     icon: GithubIcon,
@@ -55,7 +55,7 @@ export function Contact() {
 
     try {
       // Replace with your Formspree endpoint
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/mbdblnjz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
