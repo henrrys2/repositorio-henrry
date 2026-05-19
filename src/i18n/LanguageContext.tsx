@@ -9,13 +9,18 @@ import {
 } from "react";
 import { translations, type Locale } from "./translations";
 
-// 1. Obtenemos el tipo dinámico de la estructura de tus traducciones
-// Usamos 'es' como base, asumiendo que ambos idiomas tienen las mismas llaves.
-type TranslationStructure = typeof translations["es"];
+// 1. Mapeamos de forma recursiva la estructura de tus traducciones
+// Convierte los textos fijos (ej. "Inicio", "Home") en un simple 'string' general
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends object ? DeepStringify<T[K]> : string;
+};
+
+// 2. Creamos el tipo flexible basado en tu objeto en español
+type TranslationStructure = DeepStringify<typeof translations["es"]>;
 
 interface LanguageContextType {
   locale: Locale;
-  t: TranslationStructure; // 2. Ahora 't' representa al objeto completo traducido, no solo a las llaves
+  t: TranslationStructure; // Ahora 't' aceptará tanto los textos en "es" como en "en"
   toggleLocale: () => void;
   setLocale: (locale: Locale) => void;
 }
@@ -35,8 +40,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLocaleState(newLocale);
   }, []);
 
-  // 3. TypeScript ahora entenderá perfectamente que 't' cambiará entre 'es' y 'en'
-  const t: TranslationStructure = translations[locale];
+  // 3. Forzamos el casteo aquí usando 'as unknown as TranslationStructure' 
+  // para que TypeScript deje de comparar los textos literales "Inicio" vs "Home"
+  const t = translations[locale] as unknown as TranslationStructure;
 
   return (
     <LanguageContext.Provider value={{ locale, t, toggleLocale, setLocale }}>
