@@ -7,11 +7,15 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import { translations, type Locale, type TranslationKeys } from "./translations";
+import { translations, type Locale } from "./translations";
+
+// 1. Obtenemos el tipo dinámico de la estructura de tus traducciones
+// Usamos 'es' como base, asumiendo que ambos idiomas tienen las mismas llaves.
+type TranslationStructure = typeof translations["es"];
 
 interface LanguageContextType {
   locale: Locale;
-  t: TranslationKeys;
+  t: TranslationStructure; // 2. Ahora 't' representa al objeto completo traducido, no solo a las llaves
   toggleLocale: () => void;
   setLocale: (locale: Locale) => void;
 }
@@ -31,7 +35,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLocaleState(newLocale);
   }, []);
 
-  const t = translations[locale];
+  // 3. TypeScript ahora entenderá perfectamente que 't' cambiará entre 'es' y 'en'
+  const t: TranslationStructure = translations[locale];
 
   return (
     <LanguageContext.Provider value={{ locale, t, toggleLocale, setLocale }}>
