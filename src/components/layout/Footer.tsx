@@ -12,7 +12,7 @@ const socialLinks = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/henrry-mendoza",
+    href: "https://www.linkedin.com/in/henrry-mendoza-85a71619b/",
     icon: LinkedinIcon,
   },
   {
