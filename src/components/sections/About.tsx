@@ -3,7 +3,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Briefcase, Code2, FolderGit2 } from "lucide-react";
+import { Briefcase, Code2 } from "lucide-react";
 
 export function About() {
   const { t } = useLanguage();
@@ -18,12 +18,7 @@ export function About() {
       value: "15+",
       label: t.about.stats.technologies,
       icon: Code2,
-    },
-    {
-      value: "10+",
-      label: t.about.stats.projects,
-      icon: FolderGit2,
-    },
+    }
   ];
 
   return (

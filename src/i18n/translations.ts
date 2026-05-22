@@ -23,7 +23,7 @@ export const translations = {
     about: {
       title: "Sobre Mí",
       description:
-        "Soy un Desarrollador Web con más de 5 años de experiencia como Full Stack. Estoy enfocado en el desarrollo de aplicaciones web, utilizando Node.js, PHP (Laravel, CodeIgniter, CakePHP) y PostgreSQL, creando APIs y soluciones escalables.",
+        "Soy un Desarrollador Web con años de experiencia como Full Stack. Estoy enfocado en el desarrollo de aplicaciones web, utilizando Node.js, PHP (Laravel, CodeIgniter, CakePHP) y PostgreSQL, creando APIs y soluciones escalables.",
       description2:
         "Desarrollé servicios del lado del servidor mediante API Routes de Next.js, centralizando la lógica de negocios y asegurando la manipulación de datos sensibles fuera del alcance del cliente. También construí una aplicación web integral utilizando Next.js y Shadcn para automatizar procesos operativos de un centro de gimnasio.",
       stats: {
@@ -40,6 +40,7 @@ export const translations = {
       backend: "Backend",
       databases: "Bases de Datos",
       tools: "Herramientas",
+      mobile: "Móvil",
     },
     experience: {
       title: "Experiencia Profesional",
@@ -99,7 +100,7 @@ export const translations = {
     about: {
       title: "About Me",
       description:
-        "I'm a Web Developer with 5+ years of Full Stack experience. I'm focused on web application development using Node.js, PHP (Laravel, CodeIgniter, CakePHP), and PostgreSQL, creating APIs and scalable solutions.",
+        "I'm a Web Developer with years of Full Stack experience. I'm focused on web application development using Node.js, PHP (Laravel, CodeIgniter, CakePHP), and PostgreSQL, creating APIs and scalable solutions.",
       description2:
         "I developed server-side services through Next.js API Routes, centralizing business logic and ensuring sensitive data handling outside the client's reach. I also built a comprehensive web application using Next.js and Shadcn to automate operational processes for a gym center.",
       stats: {
@@ -116,6 +117,7 @@ export const translations = {
       backend: "Backend",
       databases: "Databases",
       tools: "Tools",
+      mobile: "Mobile",
     },
     experience: {
       title: "Professional Experience",

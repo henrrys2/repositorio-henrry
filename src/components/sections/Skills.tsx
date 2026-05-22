@@ -4,13 +4,14 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { skillCategories } from "@/data/skills";
-import { Monitor, Server, Database, Wrench } from "lucide-react";
+import { Monitor, Server, Database, Wrench, Smartphone } from "lucide-react";
 
 const categoryIcons: Record<string, React.ElementType> = {
   frontend: Monitor,
   backend: Server,
   databases: Database,
   tools: Wrench,
+  mobile: Smartphone,
 };
 
 export function Skills() {

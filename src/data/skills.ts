@@ -17,7 +17,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "TypeScript" },
       { name: "JavaScript" },
       { name: "HTML5" },
-      { name: "CSS3" },
+      { name: "CSS" },
+      { name: "Tailwind" },
     ],
   },
   {
@@ -29,6 +30,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Laravel" },
       { name: "CakePHP" },
       { name: "CodeIgniter" },
+      { name: "Python" },
+      { name: "FastAPI" },
       { name: "REST APIs" },
     ],
   },
@@ -47,8 +50,17 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git" },
       { name: "Linux" },
       { name: "CentOS" },
-      { name: "Scrum" },
       { name: "Vercel" },
+      { name: "pm2" },
+      { name: "Microsoft Teams" },
+      { name: "Jira" },
+      { name: "Google Cloud Platform" },
+    ],
+  },
+  {
+    key: "mobile",
+    skills: [
+      { name: "Flutter" },
     ],
   },
 ];

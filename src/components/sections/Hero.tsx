@@ -55,10 +55,7 @@ export function Hero() {
           >
             {t.hero.title}
           </span>
-          <span
-            className="inline-block w-0.5 h-7 ml-1 bg-primary align-middle"
-            style={{ animation: "typing-cursor 1s step-end infinite" }}
-          />
+
         </div>
 
         {/* Description */}
